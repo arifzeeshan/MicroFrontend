@@ -1,6 +1,6 @@
-const path = require('path')
+import path from 'path'
 
-module.exports = {
+export default {
   stories: [
     {
       directory: '../../acme-design-system/src/**',
@@ -18,7 +18,6 @@ module.exports = {
     options: {},
   },
   async viteFinal(config, { configType }) {
-    // Customize the Vite config here
     config.resolve = config.resolve || {}
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -35,6 +34,7 @@ module.exports = {
 
     return config
   },
+
   docs: {
     autodocs: true,
   },

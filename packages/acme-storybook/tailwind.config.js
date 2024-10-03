@@ -1,10 +1,9 @@
-module.exports = {
-  presets: [
-    require('@vercel/examples-ui/tailwind'),
-    require('@acme/design-system/tailwind'),
-  ],
+import vercelUITailwind from '@vercel/examples-ui/tailwind'
+import acmeDesignSystemTailwind from '@acme/design-system/tailwind'
+
+export default {
+  presets: [vercelUITailwind, acmeDesignSystemTailwind],
   content: [
-    // All the packages that might include stories
     './stories/**/*.{js,ts,jsx,tsx}',
     '../acme-design-system/src/**/*.{js,ts,jsx,tsx}',
   ],
