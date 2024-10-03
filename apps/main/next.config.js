@@ -2,6 +2,8 @@ const { DOCS_URL } = process.env
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  transpilePackages: ['@acme/components', '@acme/design-system', '@acme/utils'],
   async rewrites() {
     return [
       /**

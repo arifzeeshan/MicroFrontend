@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   assetPrefix: '/docs-static',
+  reactStrictMode: true,
+  transpilePackages: ['@acme/components', '@acme/design-system', '@acme/utils'],
   async rewrites() {
     return {
       beforeFiles: [
